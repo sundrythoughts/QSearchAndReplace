@@ -1,0 +1,12 @@
+******* QSearchAndReplace - qsar *******
+
+Qsar can be used as a text filter in a pipe (stdin/stdout) or as a standalone utility.
+It uses any number of user defined dictionaries with delimeter seperated keys and values.
+The keys keys default to simple text replacement, but can also be given as regular expressions if marked as such.
+White space before an after the keys/values does not matter unless you are doing a regular expression; it will be trimmed off before search/replacement.
+The first line of every file should contain the delimeter used in that dictionary to separate keys and values.
+
+******* Sample Dictionary *******
+eies:eyes
+ reste :   rest
+^([a-zA-Z])\{:\1 {:re
