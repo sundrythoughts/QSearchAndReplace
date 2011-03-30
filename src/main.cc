@@ -97,6 +97,10 @@ public:
 		while (!f_lower_case->atEnd ()) {
 			f_line = f_lower_case->readLine ();
 			split_keys_vals = f_line.split (":", QString::SkipEmptyParts);
+			if (split_keys_vals.size () < 2 ||
+			    split_keys_vals[0] == split_keys_vals[1]) {
+				continue;
+			}
 			m_keys_vals[split_keys_vals[0]] = split_keys_vals[1];
 
 			split_keys_vals[0][0] = split_keys_vals[0][0].toUpper ();
